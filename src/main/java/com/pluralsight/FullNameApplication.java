@@ -14,6 +14,8 @@ public class FullNameApplication {
         String firstName = input.next();
 
         System.out.print("Middle Name: ");
+        String middleName = input.next();
+
         System.out.print("Last Name: ");
         System.out.println("Suffix: ");
     }
