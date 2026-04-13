@@ -10,6 +10,9 @@ public class FullNameApplication {
         System.out.println("Hello! Welcome to our full name generator!");
         System.out.println("Please enter your details.");
 
+        System.out.print("Suffix: ");
+        String suffix = input.next();
+
         System.out.print("First Name: ");
         String firstName = input.next();
 
@@ -19,8 +22,10 @@ public class FullNameApplication {
         System.out.print("Last Name: ");
         String lastName = input.next();
 
-        System.out.println("Suffix: ");
-        String suffix = input.next();
+
+
+
+        System.out.println(suffix.trim() + " " + firstName.trim() + " " + middleName.trim() + " " + lastName.trim());
 
 
     }
