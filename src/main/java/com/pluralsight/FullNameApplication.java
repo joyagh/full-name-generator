@@ -20,5 +20,8 @@ public class FullNameApplication {
         String lastName = input.next();
 
         System.out.println("Suffix: ");
+        String suffix = input.next();
+
+
     }
 }
