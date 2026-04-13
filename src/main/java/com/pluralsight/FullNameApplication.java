@@ -13,6 +13,14 @@ public class FullNameApplication {
         System.out.print("Suffix: ");
         String suffix = input.next();
 
+        if (suffix.matches("[a-zA-Z0-9]*$")){
+            System.out.println(suffix + ".");
+        }else {
+            System.out.println("No special characters please");
+        };
+
+
+
         System.out.print("First Name: ");
         String firstName = input.next();
 
@@ -25,7 +33,7 @@ public class FullNameApplication {
 
 
 
-        System.out.println(suffix.trim() + " " + firstName.trim() + " " + middleName.trim() + " " + lastName.trim());
+        System.out.println(suffix.trim() + ". " + firstName.trim() + " " + middleName.trim() + " " + lastName.trim());
 
 
     }
