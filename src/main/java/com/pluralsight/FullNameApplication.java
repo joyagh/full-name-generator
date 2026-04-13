@@ -10,30 +10,54 @@ public class FullNameApplication {
         System.out.println("Hello! Welcome to our full name generator!");
         System.out.println("Please enter your details.");
 
-        System.out.print("Suffix: ");
-        String suffix = input.next();
+//        System.out.print("Suffix: ");
+//        String suffix = input.next();
 
-        if (suffix.matches("[a-zA-Z0-9]*$")){
-            System.out.println(suffix + ".");
-        }else {
-            System.out.println("No special characters please");
-        };
+//        if (suffix.matches("[a-zA-Z0-9]*$")){
+//            System.out.println(suffix + ".");
+//        }else {
+//            System.out.println("No special characters please");
+//        };
+
 
 
 
         System.out.print("First Name: ");
-        String firstName = input.next();
+        String firstName = input.nextLine();
 
         System.out.print("Middle Name: ");
-        String middleName = input.next();
+        String middleName = input.nextLine();
 
         System.out.print("Last Name: ");
-        String lastName = input.next();
+        String lastName = input.nextLine();
+
+        System.out.print("Suffix: ");
+        String suffix = input.nextLine();
+
+        String fullName;
+
+        if (middleName.isEmpty() && suffix.isEmpty()){
+            fullName = firstName + " " + lastName;
+
+        } else if(!middleName.isEmpty() && suffix.isEmpty()){
+            fullName = firstName + " " + middleName + " " + lastName;
+
+        } else if (middleName.isEmpty() && !suffix.isEmpty()){
+            fullName = firstName + " " + lastName + ", " + suffix;
+        } else {
+            fullName = firstName + " " + middleName + " " + lastName + ", " + suffix;
+        }
 
 
 
 
-        System.out.println(suffix.trim() + ". " + firstName.trim() + " " + middleName.trim() + " " + lastName.trim());
+
+
+        System.out.println("Full name: " + fullName);
+
+        input.close();
+
+
 
 
     }
